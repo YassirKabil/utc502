@@ -1,0 +1,15 @@
+touch episode1/ex4/list_txt.sh
+
+nano episode1/ex4/list_txt.sh
+
+txt_files=$(ls *.txt 2>/dev/null)
+
+if [ -z "$txt_files" ]; then
+    echo "Aucun fichier .txt trouvé"
+else
+    echo "$txt_files"
+fi
+
+chmod +x episode1/ex4/list_txt.sh
+
+./episode1/ex4/list_txt.sh
