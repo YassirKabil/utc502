@@ -1,0 +1,3 @@
+touch episode1/ex6/redirect_output.sh
+
+nano episode1/ex6/redirect_output.sh
