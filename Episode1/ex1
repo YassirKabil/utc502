@@ -1,3 +1,8 @@
-Exercice 1
+mkdir episode1/ex1
 
-mkdir -p episode1/ex1 
+touch episode1/ex1/a.txt
+
+nano episode1/ex1/a.txt
+
+echo "Bonjour tout le monde" > episode1/ex1/a.txt
+
