@@ -1,3 +1,20 @@
 touch episode1/ex6/redirect_output.sh
 
 nano episode1/ex6/redirect_output.sh
+
+if [ "$#" -lt 1 ]; then
+    echo "Usage: $0 commande [arguments...]"
+    exit 1
+fi
+
+"$@" > output.log 2> error.log
+
+chmod +x episode1/ex6/redirect_output.sh
+
+./episode1/ex6/redirect_output.sh ls episode1/ex1/a.txt
+
+cat output.log
+
+cat error.log
+
+
