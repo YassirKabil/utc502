@@ -2,12 +2,10 @@ touch episode1/ex4/list_txt.sh
 
 nano episode1/ex4/list_txt.sh
 
-txt_files=$(ls *.txt 2>/dev/null)
-
-if [ -z "$txt_files" ]; then
-    echo "Aucun fichier .txt trouvé"
+if ls *.txt 1> /dev/null 2>&1; then
+    ls *.txt
 else
-    echo "$txt_files"
+    echo "Aucun fichier .txt trouvé"
 fi
 
 chmod +x episode1/ex4/list_txt.sh
