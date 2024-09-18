@@ -1,1 +1,0 @@
-ln -s $(pwd)/episode1/ex1/a.txt episode1/ex3/link_to_a

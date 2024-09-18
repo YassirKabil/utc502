@@ -1,5 +1,0 @@
-touch episode1/ex7/command.txt
-
-nano episode1/ex7/command.txt
-
-ls -p | grep -v '/$' | head -n 5
