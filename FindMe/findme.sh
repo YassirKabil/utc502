@@ -1,18 +1,15 @@
 #!/bin/bash
 
-# Fonction de journalisation
 log() {
-    logger -t findme "$1" # peut mettre les phrases en français ici
+    logger -t findme "$1"
 }
 
 log "Recherche de FindMe.txt"
 
-# Recherche des fichiers FindMe.txt dans /home
 find_result=$(find /home -type f -name "FindMe.txt" 2>/dev/null)
 
 if [ -n "$find_result" ]; then
     while IFS= read -r file; do
-        # Bonus 2 : Obtenir et journaliser le propriétaire du fichier
         owner=$(stat -c '%U' "$file")
         log "Trouvé ici : $file"
         log "Le fichier est possédé par l'utilisateur : $owner"
