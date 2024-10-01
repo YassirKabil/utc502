@@ -1,0 +1,27 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2639
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww12220\viewh17440\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 echo '#!/bin/bash' > episode1/ex5/permissions_info.sh\
+\
+echo 'file=$1' >> episode1/ex5/permissions_info.sh\
+\
+echo 'permissions=$(stat -c "%A" "$file")' >> episode1/ex5/permissions_info.sh\
+\
+echo 'echo "Permissions: $permissions"' >> episode1/ex5/permissions_info.sh\
+\
+echo 'if [ -x "$file" ]; then' >> episode1/ex5/permissions_info.sh\
+\
+echo '  echo "Vous avez les droits d\\'ex\'e9cution sur ce fichier."' >> episode1/ex5/permissions_info.sh\
+\
+echo 'else' >> episode1/ex5/permissions_info.sh\
+\
+echo '  echo "Vous n\\'avez pas les droits d\\'ex\'e9cution sur ce fichier."' >> episode1/ex5/permissions_info.sh\
+\
+echo 'fi' >> episode1/ex5/permissions_info.sh\
+\
+chmod +x episode1/ex5/permissions_info.sh\
+}
