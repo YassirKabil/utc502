@@ -1,1 +1,0 @@
-ls -lS --reverse --ignore='.*' /etc/
